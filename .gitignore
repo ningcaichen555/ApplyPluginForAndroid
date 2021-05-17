@@ -88,3 +88,4 @@ gradlew
 gradle/
 gradle.properties
 local.properties
+.idea/
