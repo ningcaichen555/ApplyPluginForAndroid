@@ -3,20 +3,36 @@ buildscript {
         google()
         mavenCentral()
         mavenLocal()
-//        maven{
-//            url "http://127.0.0.1:8081/repository/maven-public/"
-//        }
+        maven{
+            url uri('repo/')
+        }
 
         maven{
-            url "./repo"
+            url "http://127.0.0.1:8081/repository/maven-public/"
         }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:4.0.2'
         classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.0'
-        classpath "com.caichen.router:RouterPlugin:0.0.1"
+        classpath "com.caichen.router:RouterPlugin:0.0.2"
     }
 }
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        mavenLocal()
+        maven{
+            url uri('repo/')
+        }
+
+        maven{
+            url "http://127.0.0.1:8081/repository/maven-public/"
+        }
+    }
+}
+
 task clean(type: Delete) {
     delete rootProject.buildDir
 }

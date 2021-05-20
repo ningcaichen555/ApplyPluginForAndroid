@@ -90,3 +90,4 @@ gradle.properties
 local.properties
 .idea/
 .idea/*.xml
+/repo/
