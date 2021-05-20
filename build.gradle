@@ -3,13 +3,17 @@ buildscript {
         google()
         mavenCentral()
         mavenLocal()
+//        maven{
+//            url "http://127.0.0.1:8081/repository/maven-public/"
+//        }
+
         maven{
-            url "http://127.0.0.1:8081/repository/maven-public/"
+            url "./repo"
         }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:4.0.2'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.10"
+        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.0'
         classpath "com.caichen.router:RouterPlugin:0.0.1"
     }
 }

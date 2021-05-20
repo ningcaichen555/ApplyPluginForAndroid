@@ -17,9 +17,10 @@ uploadArchives {
             pom.artifactId = 'RouterPlugin'
             pom.groupId = 'com.caichen.router'
             pom.version = '0.0.2'
-            repository(url: 'http://127.0.0.1:8081/repository/maven-releases/') {
-                authentication(userName: 'admin', password: 'caichen123')
-            }
+//            repository(url: 'http://127.0.0.1:8081/repository/maven-releases/') {
+//                authentication(userName: 'admin', password: 'caichen123')
+//            }
+            repository(url: './repo')
         }
     }
 }
