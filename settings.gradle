@@ -2,3 +2,4 @@ rootProject.name = "ApplyPlugin"
 include(":app")
 include(":gradle_plugin")
 include ':router_annotations'
+include ':router_processor'
