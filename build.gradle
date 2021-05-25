@@ -3,13 +3,12 @@ buildscript {
         google()
         mavenCentral()
         mavenLocal()
-        maven{
-            url uri('repo/')
+        maven {
+            url 'repo/'
         }
-
-        maven{
-            url "http://127.0.0.1:8081/repository/maven-public/"
-        }
+//        maven{
+//            url "http://127.0.0.1:8081/repository/maven-public/"
+//        }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:4.0.2'
@@ -21,15 +20,13 @@ buildscript {
 allprojects {
     repositories {
         google()
+        maven {
+            url 'repo/'
+        }
         mavenCentral()
-        mavenLocal()
-        maven{
-            url uri('repo/')
-        }
-
-        maven{
-            url "http://127.0.0.1:8081/repository/maven-public/"
-        }
+//        maven{
+//            url "http://127.0.0.1:8081/repository/maven-public/"
+//        }
     }
 }
 

@@ -1,4 +1,3 @@
-import com.sun.jndi.toolkit.url.Uri
 
 //应用groovy插件
 apply plugin: 'groovy'

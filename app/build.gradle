@@ -35,6 +35,9 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.2.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
-    implementation project(path: ':router_annotations')
-    kapt project(':router_processor')
+//    implementation project(path: ':router_annotations')
+//    kapt project(':router_processor')
+
+    implementation 'com.caichen.router:router_annotations:0.0.1'
+    kapt 'com.caichen.router:router_processor:0.0.1'
 }

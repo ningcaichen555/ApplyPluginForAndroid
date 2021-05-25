@@ -1,0 +1,22 @@
+apply plugin:'maven'
+
+Properties properties = new Properties()
+properties.load(project.rootProject.file('gradle.properties').newDataInputStream())
+def GROUPID = properties.getProperty("groupId")
+def VERSION = properties.getProperty("version")
+def REPOSITORY = properties.getProperty("repository")
+
+Properties projectProperties = new Properties()
+projectProperties.load(project.file('gradle.properties').newDataInputStream())
+def ARTIFACTID = projectProperties.getProperty("artifactId")
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            pom.artifactId = ARTIFACTID
+            pom.groupId = GROUPID
+            pom.version = VERSION
+            repository(url: uri(REPOSITORY))
+        }
+    }
+}

@@ -12,3 +12,5 @@ repositories {
     mavenCentral()
     mavenLocal()
 }
+
+apply from:rootProject.file('maven_publish.gradle')
